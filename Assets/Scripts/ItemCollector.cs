@@ -11,6 +11,7 @@ public class ItemCollector : MonoBehaviour
         {
 
             Destroy(collision.gameObject);
+            cherries++;
 
         }
     }
