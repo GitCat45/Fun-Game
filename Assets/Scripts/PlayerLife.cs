@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Animator anim;
+    private void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if(collision.gameObject.CompareTag("Trap"))
+        {
+            Die();
+        }
     }
+
+    private void Die()
+    {
+
+    }
+
 }
