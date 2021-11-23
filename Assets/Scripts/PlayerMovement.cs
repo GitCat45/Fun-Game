@@ -28,6 +28,14 @@ public class PlayerMovement : MonoBehaviour
 
     private BoxCollider2D coll;
 
+    //JUMP SOUND
+
+    [SerializeField] private AudioSource jumpSoundEffect;
+
+    //FALL SOUND
+
+
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -47,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 

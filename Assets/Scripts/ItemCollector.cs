@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] private Text cherriesText;                          
+    [SerializeField] private Text cherriesText; 
+    
+    //item collecting audio.
+
+    [SerializeField] private AudioSource itemCollectorSoundEffect;
+
     private int cherries = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Cherry"))
         {
-
+            itemCollectorSoundEffect.Play();    
             Destroy(collision.gameObject);
             cherries++;
             cherriesText.text = ("Cherries:" +cherries);
