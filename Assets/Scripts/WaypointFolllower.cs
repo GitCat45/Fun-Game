@@ -8,6 +8,8 @@ public class WaypointFolllower : MonoBehaviour
     [SerializeField] private GameObject[] waypoints;
     private int currentWaypointIndex = 0;
 
+    
+ 
     //below the speed of the hower platform
     private float speed = 2f;
     private void Update()

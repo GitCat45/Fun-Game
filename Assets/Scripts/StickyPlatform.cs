@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour
 {
-    private float speed = 2f;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
