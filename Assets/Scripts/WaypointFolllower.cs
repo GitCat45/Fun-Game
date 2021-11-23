@@ -23,5 +23,8 @@ public class WaypointFolllower : MonoBehaviour
 
         }
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * speed);
+        
     }
+
+    
 }

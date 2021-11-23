@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StickyPlatform : MonoBehaviour
+public class TrollStickyPlatform : MonoBehaviour
 {
-    private float speed = 2f;
+    private float speed = 10f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.transform.SetParent(transform);
-            
+            transform.Rotate(0, 0, 360 * speed * Time.deltaTime);
         }
     }
 
@@ -20,8 +20,7 @@ public class StickyPlatform : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.transform.SetParent(null);
-            
+            transform.Rotate(0, 0, 360 * speed * Time.deltaTime);
         }
     }
 }
-
