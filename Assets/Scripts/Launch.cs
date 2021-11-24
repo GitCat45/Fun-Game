@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Launch : MonoBehaviour
 {
-    private float launch = 50f;
+    private float launch = 70f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

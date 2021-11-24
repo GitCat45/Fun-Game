@@ -8,7 +8,7 @@ public class Targetting : MonoBehaviour
 {
     public Transform target;
 
-    public float speed = 5f;
+    public float speed = 3f;
 
     public float rotateSpeed = 200f;
 
@@ -18,7 +18,7 @@ public class Targetting : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
+    }   
 
     // Update is called once per frame
     void FixedUpdate()
@@ -29,8 +29,14 @@ public class Targetting : MonoBehaviour
 
         float rotateAmmount = Vector3.Cross(diretion, transform.up).z;
 
-        rb.angularVelocity = rotateAmmount * rotateSpeed;
+        rb.angularVelocity = -rotateAmmount * rotateSpeed;
 
         rb.velocity = transform.up * speed; 
+
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }
