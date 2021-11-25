@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cherry
   - Trap
+  - Gothrough
+  - GT
   layers:
   - Default
   - TransparentFX
